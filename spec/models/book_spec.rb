@@ -1,8 +1,8 @@
 require "rails_helper"
 
 RSpec.describe Book, type: :model do
-  it "is valid with a title" do
-    expect(Book.new(title: "Dune")).to be_valid
+  it "is valid with a title, author, price and published date" do
+    expect(Book.new(title: "Dune", author: "Frank Herbert", price: 9.99, published_date: Date.new(2015, 8, 1))).to be_valid
   end
 
   it "is invalid without a title" do

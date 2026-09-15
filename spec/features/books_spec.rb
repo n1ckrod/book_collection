@@ -13,9 +13,7 @@ RSpec.describe "Creating a book", type: :feature do
   end
 
   scenario "sunny day: valid title" do
-    visit new_book_path
-    fill_in "Title", with: "Dune"
-    click_on "Create Book"
+    fill_in_full_book
     expect(page).to have_content("Book was successfully created.")
     expect(page).to have_content("Dune")
   end
